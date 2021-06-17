@@ -1,0 +1,25 @@
+{
+    "root": "reid_market-1501",
+    "n_epochs": 300,
+
+    "is_test_only": false,
+    "test_by_global_feature": true,
+    "model_weight_path": "data/model_weight.pth",
+    
+    "lr": 2e-4,
+    "weight_decay": 0.0005,
+
+    "g_loss_weight": 0.5,
+    "g_margin": 0.3,
+
+    "l_loss_weight": 0.5,
+    "l_margin": 0.3,
+
+    "id_loss_weight": 0,
+    "id_classes": 651,
+
+    "batch_size": 32,
+
+    "is_resume_training": false,
+    "checkpoint_path": "data/checkpoint.pth"
+}
