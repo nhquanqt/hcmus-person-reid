@@ -1,14 +1,42 @@
 # Person Re-identification
 Final project of Computer Vision
 
-## Train model
-Download the Market-1501 dataset in [here](https://drive.google.com/file/d/1aCUQi3wCxaumbQCiI6xUOGsoY9rkENBa/view?usp=sharing)
+## Table of content
 
-Change `config.json` file if needed.
+- [Dataset](#dataset)
+- [Dataset preparation](#dataset-preparation)
+    - [Download raw dataset](#download-raw-dataset)
+    - [Set dataset path](#set-dataset-path)
+- [Train](#train)
+    - [Config](#config)
+    - [Run](#run)
+- [Evaluation](#evaluation)
 
-Run `main.py` to start training.
+## Students:
 
-## Result
+| Name              | Student ID | Email                         |
+|-------------------|------------|-------------------------------|
+| Nguyen Hoang Quan | 18120145   | 18120145@student.hcmus.edu.vn |
+| Le Minh Khoa      | 18120415   | 18120415@student.hcmus.edu.vn |
+
+## Dataset
+- [Market-1501](http://zheng-lab.cecs.anu.edu.au/Project/project_reid.html)
+
+## Dataset preparation
+### Download raw dataset
+Download Market-1501 via Google Drive: [link](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view?resourcekey=0-8nyl7K9_x37HlQm34MmrYQ)
+
+### Set dataset path
+In `config.json` file, change `root` value to dataset path.
+
+## Train
+### Config
+Check `config.json` file for training configuration.
+
+### Run
+Run `python main.py` to start training.
+
+## Evaluation
 
 | Methods                                  | Train feature | Test feature | Rank-1 | Rank-5 |  mAP  |
 |------------------------------------------|:-------------:|:------------:|:------:|:------:|:-----:|
