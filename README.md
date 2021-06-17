@@ -3,6 +3,7 @@ Final project of Computer Vision
 
 ## Table of content
 
+- [Proposed model](#proposed-model)
 - [Dataset](#dataset)
 - [Dataset preparation](#dataset-preparation)
     - [Download raw dataset](#download-raw-dataset)
@@ -19,6 +20,8 @@ Final project of Computer Vision
 | Nguyen Hoang Quan | 18120145   | 18120145@student.hcmus.edu.vn |
 | Le Minh Khoa      | 18120415   | 18120415@student.hcmus.edu.vn |
 
+## Proposed model
+![Proposed model](asset/architecture.png)
 ## Dataset
 - [Market-1501](http://zheng-lab.cecs.anu.edu.au/Project/project_reid.html)
 
