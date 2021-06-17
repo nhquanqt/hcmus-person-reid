@@ -3,15 +3,18 @@ Final project of Computer Vision
 
 ## Table of content
 
-- [Proposed model](#proposed-model)
-- [Dataset](#dataset)
-- [Dataset preparation](#dataset-preparation)
+- [Person Re-identification](#person-re-identification)
+  - [Table of content](#table-of-content)
+  - [Students:](#students)
+  - [Proposed method](#proposed-method)
+  - [Dataset](#dataset)
+  - [Dataset preparation](#dataset-preparation)
     - [Download raw dataset](#download-raw-dataset)
     - [Set dataset path](#set-dataset-path)
-- [Train](#train)
+  - [Train](#train)
     - [Config](#config)
     - [Run](#run)
-- [Evaluation](#evaluation)
+  - [Evaluation](#evaluation)
 
 ## Students:
 
@@ -20,8 +23,8 @@ Final project of Computer Vision
 | Nguyen Hoang Quan | 18120145   | 18120145@student.hcmus.edu.vn |
 | Le Minh Khoa      | 18120415   | 18120415@student.hcmus.edu.vn |
 
-## Proposed model
-![Proposed model](asset/architecture.png)
+## Proposed method
+![Proposed method](asset/architecture.png)
 ## Dataset
 - [Market-1501](http://zheng-lab.cecs.anu.edu.au/Project/project_reid.html)
 
