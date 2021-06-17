@@ -314,13 +314,13 @@ def main():
         
         scheduler.step()
         
-        if (epoch + 1) % 10 == 0:
+        if (epoch + 1) % cfg['epochs_per_valid'] == 0:
             mAP, cmc_score = valid(model, market1501_trainval)
             print(f'--------------------------')
             print(f'validation: mAP={mAP}, rank1={cmc_score[0]}, rank5={cmc_score[4]}')
             print(f'--------------------------')
         
-        if (epoch + 1) % 100 == 0:
+        if (epoch + 1) % cfg['epochs_per_checkpoint'] == 0:
             # save model
             torch.save({
                 'epoch': epoch + 1,
