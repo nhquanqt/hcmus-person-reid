@@ -68,7 +68,7 @@ def valid(model, dataset):
     model.train()
     return mAP, cmc_score
 
-def test(model, dataset, is_global_feature=True):
+def test(model, dataset, is_global_feature=True, re_ranking=False):
     # Remember to set model to evaluation
     model.eval()
 
@@ -140,6 +140,11 @@ def test(model, dataset, is_global_feature=True):
 
         dist_mat = torch.cat(dist_mat)
 
+    if is_global_feature and re_ranking:
+        dist_q_q = euclidean_dist(query_feat, query_feat)
+        dist_g_g = euclidean_dist(gallery_feat, gallery_feat)
+        dist_mat = re_ranking(dist_mat, dist_q_q, dist_g_g)
+
     # calculate rank-k precision
     cmc_score = cmc(dist_mat, dataset.query_ids, dataset.gallery_ids, dataset.query_cams, dataset.gallery_cams, topk=5, \
                 separate_camera_set=False,single_gallery_shot=False,first_match_break=True)
@@ -154,6 +159,8 @@ def main():
     cfg = json.load(open('config.json'))
 
     print(cfg)
+
+    assert cfg['test_by_global_feature'] or not cfg['re_ranking'], 'The program could perform re-ranking only with global feature.'
 
     root = cfg['root']
 

@@ -1,10 +1,11 @@
 {
-    "root": "reid_market-1501",
+    "root": "Market-1501-v15.09.15",
     "n_epochs": 300,
 
     "is_test_only": false,
     "test_by_global_feature": true,
     "model_weight_path": "data/model_weight.pth",
+    "re_ranking": true,
     
     "lr": 2e-4,
     "weight_decay": 0.0005,
