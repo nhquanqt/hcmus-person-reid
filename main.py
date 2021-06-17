@@ -294,8 +294,11 @@ def main():
                 total_id_loss.append(id_loss.item())
 
             iter += 1
-        print(f'in {(time.time() - t_now)}s')
-        print(f'mean_loss = {np.mean(total_loss)}, mean_g_loss = {np.mean(total_g_loss)}, mean_l_loss = {np.mean(total_l_loss)}, mean_id_loss = {np.mean(total_id_loss)}')
+        print(f'ran in {(time.time() - t_now)}s')
+        if id_loss_weight > 0:
+            print(f'mean_loss = {np.mean(total_loss)}, mean_g_loss = {np.mean(total_g_loss)}, mean_l_loss = {np.mean(total_l_loss)}, mean_id_loss = {np.mean(total_id_loss)}')
+        else:
+            print(f'mean_loss = {np.mean(total_loss)}, mean_g_loss = {np.mean(total_g_loss)}, mean_l_loss = {np.mean(total_l_loss)}')
         print(f'mean_g_prec = {np.mean(total_g_prec)}, mean_l_prec = {np.mean(total_l_prec)}')
         print(f'mean_g_sm = {np.mean(total_g_sm)}, mean_l_sm = {np.mean(total_l_sm)}')
         print(f'mean_g_dist_ap = {np.mean(total_g_dist_ap)}, mean_l_dist_ap = {np.mean(total_l_dist_ap)}')
